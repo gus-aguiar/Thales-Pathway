@@ -1,15 +1,15 @@
-/* Reset básico para garantir consistência entre navegadores */
+ /* Reset básico para garantir consistência entre navegadores */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Palatino Linotype", serif;
 }
 
 /* Corpo com fundo temático inspirado em Pokédex */
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at top left, #6a11cb, #2e0249 60%, #120025);
+  background: radial-gradient(circle at top left, #E3DEC0, #ffffff 60%, #757546);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +34,7 @@ body {
 /* Estrutura principal da Pokédex */
 .pokedex {
   width: min(680px, 100%);
-  background: linear-gradient(145deg, rgba(54, 0, 77, 0.9), rgba(106, 17, 203, 0.9));
+  background: linear-gradient(145deg, rgba(19, 247, 255, 0.9), rgba(7, 75, 80, 0.904));
   border-radius: 24px;
   padding: 2.5rem;
   box-shadow: 0 30px 80px rgba(17, 0, 32, 0.55);
@@ -61,27 +61,27 @@ body {
 
 .pokedex__header h1 {
   font-size: clamp(2rem, 4vw, 2.75rem);
-  color: #e1c4ff;
+  color: #ffffff;
 }
 
 .pokedex__header p {
   font-size: 1rem;
-  color: #d7b8ff;
+  color: #ffffff;
 }
 
-.pokedex__gengar {
-  width: min(180px, 40vw);
-  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.5));
-  animation: float 3s ease-in-out infinite;
+.pokedex__pheromosa {
+  width: min(400px, 40vw);
+  filter: drop-shadow(0 12px 20px rgba(255, 255, 255, 0.5));
+  animation: pulse 2s ease-in-out infinite;
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
+@keyframes pulse {
+  0%, 100%
+  {
+    transform: scale(1);
   }
   50% {
-    transform: translateY(-8px);
+    transform: scale(1.2);
   }
 }
 
@@ -96,8 +96,8 @@ body {
   flex: 1 1 240px;
   padding: 0.85rem 1rem;
   border-radius: 12px;
-  border: 2px solid rgba(180, 132, 255, 0.7);
-  background-color: rgba(22, 0, 44, 0.55);
+  border: 2px solid #123a3f;
+  background-color: #245257;
   color: #f7ecff;
   font-size: 1rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -109,24 +109,36 @@ body {
 
 .pokedex__form input:focus {
   outline: none;
-  border-color: #c77dff;
-  box-shadow: 0 0 0 3px rgba(128, 90, 213, 0.35);
+  border-color: #22f0ff;
+  box-shadow: 0 0 0 3px rgba(131, 228, 228, 0.35);
 }
 
 .pokedex__form button {
-  padding: 0.85rem 1.5rem;
-  border-radius: 12px;
+  padding: 0.85rem 0.85rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
   border: none;
-  font-weight: 600;
-  background: linear-gradient(135deg, #7f00ff, #e100ff);
-  color: #fff;
+  font-weight: 900;
+  background: linear-gradient(180deg, #ff0000 50%, #ffffff 50%);
+  color: #000000;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .pokedex__form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(143, 0, 255, 0.45);
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+
+  33% { transform: translateX(-7px);
+        rotate: -15deg; }
+
+  66% { transform: translateX( 7px);
+        rotate: 15deg; }
+
+  100% { transform: translateX(0); }
 }
 
 /* Área de resultado que abriga o cartão do Pokémon */
@@ -140,10 +152,10 @@ body {
   grid-template-columns: minmax(160px, 220px) 1fr;
   gap: 1.5rem;
   align-items: center;
-  background: rgba(26, 0, 51, 0.8);
+  background: rgba(5, 0, 51, 0.8);
   padding: 1.5rem;
   border-radius: 18px;
-  border: 2px solid rgba(179, 132, 255, 0.25);
+  border: 2px solid rgba(132, 175, 255, 0.25);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
@@ -164,7 +176,7 @@ body {
   aspect-ratio: 1 / 1;
   object-fit: contain;
   justify-self: center;
-  background: linear-gradient(145deg, rgba(127, 0, 255, 0.25), rgba(225, 0, 255, 0.15));
+  background: linear-gradient(145deg, rgba(55, 0, 255, 0.25), rgba(0, 26, 255, 0.15));
   border-radius: 16px;
   padding: 1rem;
 }
