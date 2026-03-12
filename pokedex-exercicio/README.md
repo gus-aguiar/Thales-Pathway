@@ -65,3 +65,4 @@ Cada arquivo está repleto de comentários para explicar o que está acontecendo
 - Utilizar `localStorage` para salvar as pesquisas recentes.
 
 Bom estudo e divirta-se criando sua própria Pokédex! 
+..
