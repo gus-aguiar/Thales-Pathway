@@ -44,6 +44,9 @@ Cada arquivo está repleto de comentários para explicar o que está acontecendo
 3. Troque a fonte padrão do projeto por outra do Google Fonts e ajuste os tamanhos para manter a leitura confortável.
 4. Adicione um efeito `hover` diferente no botão de busca (por exemplo, uma leve rotação ou aumento de escala).
 5. Faça com que o cartão do Pokémon pisque suavemente quando um novo resultado for carregado (use `@keyframes`).
+
+   > **💡 Dica:** Este exercício pode ser feito apenas editando o `style.css`! O JavaScript recria o cartão (`.pokemon-card`) toda vez que um novo Pokémon é carregado, então você pode adicionar uma animação CSS que roda quando o elemento aparece na tela. Exemplo:
+  
 6. Inclua um contorno colorido diferente para cada tipo de Pokémon (fogo, água, planta...) usando classes dinâmicas no JavaScript.
 7. Mostre o **ID** do Pokémon com zeros à esquerda (por exemplo, `#025`) praticando manipulação de strings.
 8. Converta a altura e o peso do Pokémon para outras unidades (metros/pés e quilos/libras) para treinar cálculos simples.
