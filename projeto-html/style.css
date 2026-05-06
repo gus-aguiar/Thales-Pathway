@@ -17,9 +17,9 @@ font-size: 30px;
 line-height: 1.7;
 }
 
-#grass{color: green;}
-#fire{color: red}
-#water{color: dodgerblue;}
+.grass{color: green;}
+.fire{color: red}
+.water{color: dodgerblue;}
 
 th, td {
 
