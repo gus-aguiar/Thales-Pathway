@@ -7,4 +7,15 @@ top: 0;
 position: fixed;
 }
 
+#pokemon_table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 2%;
+padding: 10px;
+border: red;
+}
 
+th, td {
+
+    text-align: center;
+}
