@@ -12,8 +12,14 @@ width: 100%;
 border-collapse: collapse;
 margin-top: 2%;
 padding: 10px;
-border: red;
+font-family: 'Times New Roman', Times, serif;
+font-size: 30px;
+line-height: 1.7;
 }
+
+#grass{color: green;}
+#fire{color: red}
+#water{color: dodgerblue;}
 
 th, td {
 
