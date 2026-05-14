@@ -1,27 +1,45 @@
-// Desafio 1 - Thales
-function compareTrue() {
-  // seu código aqui
+ // Desafio 1 - Thales
+function compareTrue(a, b) {
+  
+  return a && b;
+  
 }
+compareTrue(true, true);
+compareTrue(true, false);
+compareTrue(false, false);
 
 // Desafio 2 - Thales
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  
+  return base * height / 2;
 }
+calcArea(10, 50);
+calcArea(5, 2);
+calcArea(51, 1);
 
 // Desafio 3 - Thales
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+
+  return frase.split(' ');
+
 }
+splitSentence('hello world');
 
 // Desafio 4 - Thales
-function concatName() {
-  // seu código aqui
+function concatName(palavras) {
+  
+  return palavras[palavras.length - 1] + ", " + palavras[0]
+
 }
+concatName(['hello', 'world,', 'I', 'am', 'here', '.']);
 
 // Desafio 5 - Thales
-function footballPoints() {
-  // seu código aqui
+function footballPoints(vitoria, empate) {
+ 
+  return vitoria * 3 + empate;
+
 }
+
 
 // Desafio 6 - Thales
 function highestCount() {
