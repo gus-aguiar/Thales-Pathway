@@ -100,20 +100,92 @@ function fizzBuzz(fB) {
  }
  return resposta;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 
 // Desafio 9 - Thales
-function encode() {
-  // seu código aqui
+function encode(frase) {
+
+  let novaFrase = "";
+
+  for (let index = 0; index < frase.length; index += 1){
+
+    if(frase[index] === "a"){
+      novaFrase += "1";
+    }
+    else if(frase[index] === "e"){
+      novaFrase += "2";
+    }
+    else if(frase[index] === "i"){
+      novaFrase += "3";
+    }
+    else if(frase[index] === "o"){
+      novaFrase += "4";
+    }
+    else if(frase[index] === "u"){
+      novaFrase += "5";
+    }
+    else{
+      novaFrase += frase[index];
+  }
+  }
+    console.log(novaFrase);
+    return novaFrase;
 }
-function decode() {
-  // seu código aqui
+//encode("hello world");
+
+function decode(frase) {
+
+  let novaFrase = "";
+
+  for (let index = 0; index < frase.length; index += 1){
+
+    if(frase[index] === "1"){
+      novaFrase += "a";
+    }
+    else if(frase[index] === "2"){
+      novaFrase += "e";
+    }
+    else if(frase[index] === "3"){
+      novaFrase += "i";
+    }
+    else if(frase[index] === "4"){
+      novaFrase += "o";
+    }
+    else if(frase[index] === "5"){
+      novaFrase += "u";
+    }
+    else{
+      novaFrase += frase[index];
+  }
+  }
+    //console.log(novaFrase);
+    return novaFrase;
 }
+//decode("h2ll4 w4rld");
 
 // Desafio 10 - Thales
-function techList() {
-  // seu código aqui
+function techList(tech, nome) {
+
+  let lista = [];
+  tech.sort();
+  
+  if(tech.length > 0){
+  for (let index = 0; index < tech.length; index += 1){
+    lista.push( {
+                  name: nome,
+                  tech: tech[index]
+    });
+  }
+  return lista;
 }
+  else if(tech.length === 0){
+    return "Vazio!";
+  }
+
+  
+  
+}
+techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas')
 
 module.exports = {
   calcArea,
