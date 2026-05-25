@@ -52,14 +52,42 @@ function generatePhoneNumber(telefone) {
 generatePhoneNumber([3, 1, 9, 8, 3, 3, 5, 2, 2, 9, 3]);
 
 // Desafio 12 - Thales
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(ladoA, ladoB, ladoC) {
+    
+  if(ladoA > ladoB + ladoC || ladoB > ladoC + ladoA || ladoC > ladoB + ladoA){
+    return false;
+  }
+  else{
+    return true;
+  }
 }
 
 // Desafio 13 - Thales
-function hydrate() {
-  // seu código aqui
+function hydrate(copos) {
+  
+  let numeros = [];
+  let soma = 0;
+
+  for(let index = 0; index < copos.length; index += 1){
+    if(!isNaN(copos[index]) && copos[index] !== ' '){
+      numeros.push(Number(copos[index]));
+    }
+  }
+
+  for(let index = 0; index < numeros.length; index += 1){
+    soma += numeros[index];
+  }
+  //console.log(numeros);
+  //console.log(soma);
+
+  if(soma > 1){
+    return soma + " copos de água";
+  }
+  else{
+    return soma + " copo de água";
+  }
 }
+//hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
 
 module.exports = {
   generatePhoneNumber,

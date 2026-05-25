@@ -128,7 +128,7 @@ function encode(frase) {
       novaFrase += frase[index];
   }
   }
-    console.log(novaFrase);
+    //console.log(novaFrase);
     return novaFrase;
 }
 //encode("hello world");
