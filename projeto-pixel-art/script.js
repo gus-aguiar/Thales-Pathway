@@ -1,8 +1,11 @@
 window.onload = function () {
     let button = document.getElementById('button-random-color');
+    let color = document.querySelectorAll('.color');
+    let color1 = document.querySelector('.block1');
     let color2 = document.querySelector('.block2');
     let color3 = document.querySelector('.block3');
     let color4 = document.querySelector('.block4');
+    let board = document.getElementById('pixel-board');
 
     document.querySelector('.block2').style.backgroundColor = localStorage.getItem('cor2');
     document.querySelector('.block3').style.backgroundColor = localStorage.getItem('cor3');
@@ -31,5 +34,42 @@ window.onload = function () {
         cor.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
     }
 
+
+    for(let index = 0; index < 25; index += 1){
+        
+        let pixel = document.createElement('div'); 
+
+        pixel.className = 'pixel';
+
+        board.appendChild(pixel);
+    }
+
+
+    for (let indexCor = 0; indexCor < color.length; indexCor += 1) {
+
+    color[indexCor].addEventListener('click', function (){
+
+        for (let index = 0; index < color.length; index += 1) {
+            color[index].classList.remove('selected');
+        }
+
+        color[indexCor].classList.add('selected');
+    });
+    
+    }
+
+    let pixel = document.querySelectorAll('.pixel');
+    
+
+    for(let index = 0; index < pixel.length; index += 1){
+
+        pixel[index].addEventListener('click', function (){
+
+        let selected = document.querySelector('.selected');    
+
+        pixel[index].style.backgroundColor = getComputedStyle(selected).backgroundColor;
+    });
+
+    }
 
 };
