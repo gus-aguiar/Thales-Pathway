@@ -6,6 +6,7 @@ window.onload = function () {
     let color3 = document.querySelector('.block3');
     let color4 = document.querySelector('.block4');
     let board = document.getElementById('pixel-board');
+    let buttonLimpar = document.getElementById('clear-board');
 
     document.querySelector('.block2').style.backgroundColor = localStorage.getItem('cor2');
     document.querySelector('.block3').style.backgroundColor = localStorage.getItem('cor3');
@@ -71,5 +72,33 @@ window.onload = function () {
     });
 
     }
+
+     for(let index = 0; index < pixel.length; index += 1){
+
+        buttonLimpar.addEventListener('click', function (){  
+
+        pixel[index].style.backgroundColor = 'white';
+
+        localStorage.setItem(`pixel${index}`, pixel[index].style.backgroundColor);
+    });
+
+    }
+
+    for(let index = 0; index < pixel.length; index += 1){
+
+        pixel[index].addEventListener('click', function saveBoard(){  
+
+        localStorage.setItem(`pixel${index}`, pixel[index].style.backgroundColor);
+    });
+
+    }    
+
+    for(let index = 0; index < pixel.length; index += 1){
+
+
+        pixel[index].style.backgroundColor = localStorage.getItem(`pixel${index}`);
+    };
+
+      
 
 };
