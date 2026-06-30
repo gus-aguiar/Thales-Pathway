@@ -57,3 +57,13 @@ body{
     font-size: large;
     margin-bottom: 10px;
 }
+
+#board-size{
+    width: 150px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+#generate-board{
+    height: 30px;
+}
